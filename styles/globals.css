@@ -8,26 +8,35 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body[data-theme="dark"] {
+  --bg-color: rgb(14, 20, 27);
+  --text-color: rgb(242, 245, 247);
+}
+
+body[data-theme="light"] {
+  --bg-color: rgb(245, 245, 247);
+  --text-color: rgb(35, 31, 32);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text-color);
+  font-family: "General Sans", sans-serif;
+
+  background: var(--bg-color);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+.ticker:hover ul {
+  animation-play-state: paused;
 }
