@@ -10,12 +10,6 @@ type Props = {
 export default function Layout({ children }: Props) {
   return (
     <>
-      <Head>
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=general-sans@200,500,300,600,400,700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <Navbar />
       <Ticker />
       <main className="p-8">{children}</main>

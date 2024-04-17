@@ -27,12 +27,39 @@ const Ticker = (props: Props) => {
           return (
             <li
               key={idx}
-              className={`${
-                ticker.pAndL.substring(0, 1) === "+"
-                  ? "before:content-['⬆'] before:text-green-500 before:text-xl before:mx-1"
-                  : "before:content-['⬇'] before:text-red-500 before:text-xl before:mx-1"
-              }`}
+              className="flex justify-between items-center min-w-fit"
             >
+              {ticker.pAndL.substring(0, 1) === "-" ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 text-red-500"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 text-green-500"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+                  />
+                </svg>
+              )}
               <span className="font-bold">{ticker.name}</span>
               <span className="font-bold mx-1">{ticker.price}</span>
               <span
@@ -53,12 +80,39 @@ const Ticker = (props: Props) => {
           return (
             <li
               key={idx}
-              className={`${
-                ticker.pAndL.substring(0, 1) === "+"
-                  ? "before:content-['⬆'] before:text-green-500 before:text-xl "
-                  : "before:content-['⬇'] before:text-red-500 before:text-xl "
-              }`}
+              className="flex justify-between items-center min-w-fit"
             >
+              {ticker.pAndL.substring(0, 1) === "-" ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 text-red-500"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 text-green-500"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+                  />
+                </svg>
+              )}
               <span className="font-bold">{ticker.name}</span>
               <span className="font-bold mx-1">{ticker.price}</span>
               <span
