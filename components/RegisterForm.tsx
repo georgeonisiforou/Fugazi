@@ -77,7 +77,7 @@ export default function RegisterForm({
             Register to receive your tailored financial news
           </span>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="flex flex-col gap-6 max-w-[450px] w-[450px]">
+            <div className="flex flex-col gap-6 max-w-[450px] sm:w-[450px]">
               <TextField
                 id="standard-basic"
                 label="First Name"

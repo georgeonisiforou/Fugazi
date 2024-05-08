@@ -14,7 +14,7 @@ export default function Navbar({}: Props) {
   }, [theme]);
 
   return (
-    <div className="flex justify-between px-16 py-4 items-center bg-blue-400">
+    <div className="flex justify-between px-2 sm:px-16 py-4 items-center bg-blue-400">
       <Link href={"/"} className="uppercase text-3xl font-bold antialiased">
         Fugazi
       </Link>

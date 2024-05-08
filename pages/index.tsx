@@ -114,11 +114,11 @@ export default function Home() {
           isLoading: isLoading,
         }}
       >
-        <div className="grid grid-cols-5 h-auto">
-          <div className="col-span-1">
+        <div className="lg:grid lg:grid-cols-5 h-auto flex gap-8 flex-wrap">
+          <div className="lg:col-span-1">
             <Preferences />
           </div>
-          <div className="col-span-4">
+          <div className="lg:col-span-4 justify-center items-center flex w-full">
             <Feed />
           </div>
         </div>

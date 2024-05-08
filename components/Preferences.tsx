@@ -49,9 +49,9 @@ function Preferences({}: Props) {
   };
 
   return (
-    <div className="flex flex-col gap-4 max-w-[250px]">
+    <div className="flex flex-col gap-4">
       <span className="font-medium text-lg">Select your preferences:</span>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-row justify-center lg:flex-col gap-6 flex-wrap">
         <FormGroup className="flex flex-col gap-2">
           <span className="font-semibold">Source:</span>
           <div>
@@ -125,6 +125,7 @@ function Preferences({}: Props) {
             id="standard-basic"
             label="Ticker"
             variant="standard"
+            className="max-w-[250px]"
             ref={tickerRef}
             value={data?.ticker.ticker}
             onChange={(e) => data?.ticker.setTicker(e.target.value)}
@@ -138,6 +139,7 @@ function Preferences({}: Props) {
           />
           <Button
             variant="contained"
+            className="max-w-[250px]"
             style={{
               backgroundColor: "var(--text-color)",
               color: "var(--bg-color)",
@@ -159,7 +161,7 @@ function Preferences({}: Props) {
         <span className="h-[1px] opacity-50 bg-gray-300 w-4/5 m-auto"></span>
         <Button
           variant="contained"
-          className="bg-red-600 font-semibold hover:bg-red-700"
+          className="bg-red-600 font-semibold hover:bg-red-700 max-w-[250px] min-w-[180px]"
           onClick={() => {
             handleReset();
             data?.preferences.setPreferences({
@@ -173,7 +175,7 @@ function Preferences({}: Props) {
         <Button
           disabled={data?.isLoading}
           variant="contained"
-          className="bg-blue-600 font-semibold hover:bg-blue-700"
+          className="bg-blue-600 font-semibold hover:bg-blue-700 max-w-[250px] min-w-[180px]"
           onClick={data?.refetch}
         >
           GET NEWS

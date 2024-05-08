@@ -21,8 +21,8 @@ const Ticker = (props: Props) => {
   ];
 
   return (
-    <div className=" py-2 border-y-2 overflow-hidden select-none flex my-2 gap-[20px] ticker">
-      <ul className="flex justify-between gap-[20px] items-center min-w-full animate-scroll">
+    <div className=" py-2 border-y-2 overflow-hidden select-none flex my-2 gap-[10px] ticker min-w-[2000px]">
+      <ul className="flex justify-between gap-[10px] items-center min-w-full flex-1 animate-scroll ">
         {tickers.map((ticker, idx) => {
           return (
             <li
@@ -75,7 +75,7 @@ const Ticker = (props: Props) => {
           );
         })}
       </ul>
-      <ul className="flex justify-between gap-[20px] items-center min-w-full animate-scroll">
+      <ul className="flex justify-between gap-[10px] items-center min-w-full flex-1 animate-scroll">
         {tickers.map((ticker, idx) => {
           return (
             <li

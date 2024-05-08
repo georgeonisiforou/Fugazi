@@ -18,7 +18,7 @@ function NewsCard({ img, title, description }: Props) {
     <>
       <Card
         sx={{
-          maxWidth: 350,
+          maxWidth: 300,
           backgroundColor: "var(--text-color)",
           color: "var(--bg-color)",
           height: "fit-content",

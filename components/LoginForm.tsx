@@ -72,7 +72,7 @@ export default function LoginForm() {
               Sign in to your account
             </span>
             <form onSubmit={handleSubmit(loginSubmit)}>
-              <div className="flex flex-col gap-8 max-w-[450px] w-[450px]">
+              <div className="flex flex-col gap-8 max-w-[450px] sm:w-[450px]">
                 <TextField
                   id="standard-basic"
                   label="Email"

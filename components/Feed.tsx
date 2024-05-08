@@ -26,10 +26,10 @@ function Feed({}: Props) {
   };
 
   return (
-    <div className="flex flex-col justify-between items-center h-full">
+    <div className="flex flex-col gap-4 justify-between  items-center h-full ">
       {data ? (
         <>
-          <div className="flex gap-6">
+          <div className="flex justify-center items-center gap-6 flex-col sm:flex-row flex-wrap">
             {data &&
               data.articlesData?.data?.map(
                 (
@@ -52,6 +52,7 @@ function Feed({}: Props) {
               )}
           </div>
           <Pagination
+            className="max-w-[300px] sm:max-w-full"
             page={data.page.currentPage}
             count={numberOfPages}
             onChange={handlePageChange}
